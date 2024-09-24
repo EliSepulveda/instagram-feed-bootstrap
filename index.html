@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Layout</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="makeGridView()">
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" style="width: 30px; height: 30px; margin-right: 8px;">
+            Instagram
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <button class="btn btn-success mr-3" data-toggle="modal" data-target="#createPostModal">Create a new post</button>
+            
+           
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="settingsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="bi bi-gear"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="settingsDropdown">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Accessibility</a>
+                    <a class="dropdown-item" href="#">Privacy and Data</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="#">Log out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container mt-4 text-center">
+    <button id="gridViewButton" class="btn btn-primary"><i class="bi bi-grid-3x3-gap-fill"></i></button>
+    <button id="listViewButton" class="btn btn-light"><i class="bi bi-list"></i></button>
+</div>
+
+
+<div class="container mt-4" id="postContainer">
+    <div class="row" id="postsRow">
+        <div class="post col-4">
+            <h4>My Crazy dog Spark! <span class="date">08/26</span></h4>
+            <img src="https://images.sipse.com/r70zOR2OUhBj3XWarpLrqzQh2rg=/827x508/smart/2019/07/06/1562448551445.PNG" class="post-image img-fluid" alt="Dog Picture">
+            <p class="mt-3 mb-0"><strong>204 Likes</strong></p>
+            <p>This is an example of a very good photo that you can post on Instagram.</p>
+        </div>
+
+        <div class="post col-4">
+            <h4>The greatness of Croatia <span class="date">04/09</span></h4>
+            <img src="https://lp-cms-production.imgix.net/2020-11/500pxRF_102603123.jpg" class="post-image img-fluid" alt="Croatia Image">
+            <p class="mt-3 mb-0"><strong>26985 Likes</strong></p>
+            <p>This is an example of a very good photo that you can post on Instagram.</p>
+        </div>
+
+        <div class="post col-4">
+            <h4>Amazing GOAL by Cristiano! <span class="date">06/10</span></h4>
+            <img src="https://cdnwine.diario1.com/wp-content/uploads/2015/03/Cris_ronaldo.jpg" class="post-image img-fluid" alt="Cristiano Goal">
+            <p class="mt-3 mb-0"><strong>204 Likes</strong></p>
+            <p>This is an example of a very good photo that you can post on Instagram.</p>
+        </div>
+        <div class="post col-4">
+            <h4>paris! <span class="date">03/26</span></h4>
+            <img src="https://www.tripsavvy.com/thmb/xr9LrtO4BBgOO_qcpT9vQPk0J-0=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-143595479-58485e335f9b5851e5ef73e0.jpg" class="post-image img-fluid" alt="parisPicture">
+            <p class="mt-3 mb-0"><strong>22222 Likes</strong></p>
+            <p>A country where love is in the air.</p>
+        </div>
+
+        <div class="post col-4">
+            <h4> happy women  <span class="date">04/09</span></h4>
+            <img src="https://img.freepik.com/foto-gratis/senora-feliz-bailando-sobre-fondo-azul-lentejuelas_163305-21340.jpg?size=626&ext=jpg" class="post-image img-fluid" alt="happy women">
+            <p class="mt-3 mb-0"><strong>8985 Likes</strong></p>
+            <p>This is an example of a very good photo that you can post on Instagram.</p>
+        </div>
+
+        <div class="post col-4">
+            <h4>family time! <span class="date">06/10</span></h4>
+            <img src="https://emisorasunidas.com/wp-content/uploads/2018/12/familia_baja-720x400-1.jpg" class="post-image img-fluid" alt="family time">
+            <p class="mt-3 mb-0"><strong>20541 Likes</strong></p>
+            <p>This is an example of a very good photo that you can post on Instagram.</p>
+        </div>
+        <div class="post col-4">
+            <h4> code! <span class="date">08/26</span></h4>
+            <img src="https://www.sdpmedia.co.uk/web/wp-content/uploads/programming-code.jpg" class="post-image img-fluid" alt="code">
+            <p class="mt-3 mb-0"><strong>100254 Likes</strong></p>
+            <p>This is an example of a very good photo that you can post on Instagram.</p>
+        </div>
+
+        <div class="post col-4">
+            <h4>work team  <span class="date">04/09</span></h4>
+            <img src="https://3.bp.blogspot.com/-PN6_OZp21yU/VjqRGFLHx_I/AAAAAAAAADU/cI87KLqauRo/s1600/estudiantes-en-grupo.jpg" class="post-image img-fluid" alt=" work team">
+            <p class="mt-3 mb-0"><strong>8985 Likes</strong></p>
+            <p>This is an example of a very good photo that you can post on Instagram.</p>
+        </div>
+
+        <div class="post col-4">
+            <h4>Colombia! <span class="date">06/10</span></h4>
+            <img src="https://facts.net/wp-content/uploads/2020/08/AdobeStock_132056003.jpeg" class="post-image img-fluid" alt="Colombia">
+            <p class="mt-3 mb-0"><strong>95621 Likes</strong></p>
+            <p>This is an example of a very good photo that you can post on Instagram.</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createPostModalLabel">Create a new post</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="postCaption">Caption:</label>
+                        <textarea class="form-control" id="postCaption" placeholder="Add the caption of your post here"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-light"><i class="bi bi-camera"></i></button>
+                    <button type="button" class="btn btn-light"><i class="bi bi-geo-alt"></i></button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<script>
+    const gridViewButton = document.getElementById('gridViewButton');
+    const listViewButton = document.getElementById('listViewButton');
+    const postContainer = document.getElementById('postContainer');
+    const posts = document.querySelectorAll('.post');
+    const postImages = document.querySelectorAll('img.post-image');
+    const postsRow = document.querySelector('#postsRow');
+
+    function makeGridView() {
+        posts.forEach(post => {
+            post.classList.add('col-4');
+            post.classList.remove('col-12');
+            post.classList.remove('card-item');
+            post.classList.remove('card');
+            post.classList.remove('mb-4');
+            post.querySelectorAll('h4, p').forEach(element => {
+                element.style.display = 'none'; 
+            });
+        });
+        postImages.forEach(function(image) {
+            image.classList.add('post-image');
+        });
+        postsRow.style.flexDirection = "row";
+        gridViewButton.classList.add('btn-primary');
+        listViewButton.classList.remove('btn-primary');
+    }
+
+    function makeListView() {
+        posts.forEach(post => {
+            post.classList.remove('col-4');
+            post.classList.add('col-12');
+            post.classList.add('card');
+            post.classList.add('card-item');
+            post.classList.add('mb-4');
+            post.querySelectorAll('h4, p').forEach(element => {
+                element.style.display = ''; 
+            });
+        });
+        postImages.forEach(function(image) {
+            image.classList.remove('post-image');
+        });
+        postsRow.style.flexDirection = "column";
+        listViewButton.classList.add('btn-primary');
+        gridViewButton.classList.remove('btn-primary');
+
+    }
+
+    gridViewButton.addEventListener('click', makeGridView);
+    listViewButton.addEventListener('click', makeListView);
+
+</script>
+</body>
+</html>
